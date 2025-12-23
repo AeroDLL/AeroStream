@@ -1,29 +1,27 @@
-# 🚀 AeroStream V1.6 - High-Performance Story View Booster
+# 🦅 Aero Stream: Cloudflare Bridge
 
-AeroStream, hikaye platformlarında (Inkspired vb.) organik trafik simülasyonu yaparak görüntülenme sayılarını optimize etmek için tasarlanmış bir otomasyon scriptidir. Özellikle VDS (Sanal Sunucu) ve Proxy kullanımı için optimize edilmiştir.
+![Status](https://img.shields.io/badge/Status-Active-green)
+![Python](https://img.shields.io/badge/Backend-Python%20Flask-blue)
+![JS](https://img.shields.io/badge/Frontend-Tampermonkey-yellow)
 
-## 🌟 Özellikler
+**Aero Stream Bridge**, yüksek güvenlikli (Cloudflare 1020/403 Errors) sitelerden veri çekmek için geliştirilmiş "Melez" (Hybrid) bir otomasyon çözümüdür.
 
-- **Organik Okuyucu Simülasyonu:** Rastgele sürelerde bekleme ve yumuşak kaydırma (smooth scrolling) hareketleri ile gerçek kullanıcı davranışı sergiler.
-- **Proxy Bilgilendirme Paneli:** Ekranın sağ altında aktif proxy durumunu ve bir sonraki yenileme süresini gösteren şık bir konsol.
-- **Oturum Temizleyici:** Her yenileme öncesi `localStorage` ve `sessionStorage` temizliği yaparak platform algoritmalarına yakalanma riskini minimize eder.
-- **VDS Dostu:** 7/24 kesintisiz çalışma için hafif ve stabil kod yapısı.
+Standart botların aksine, **gerçek bir tarayıcı** (Browser) kullandığı için Cloudflare engellerine takılmaz.
 
-## 🛠️ Kurulum Rehberi
+### 🚀 Nasıl Çalışır? (Architecture)
+1.  **Frontend (Tarayıcı):** Tampermonkey scripti siteye gerçek bir kullanıcı gibi girer.
+2.  **Bypass:** Cloudflare, tarayıcıyı doğruladığı için 1020 hatası vermez.
+3.  **Bridge (Köprü):** Script, veriyi alır ve arka planda çalışan Python sunucusuna gönderir.
+4.  **Backend (Python):** Gelen veriyi JSON olarak kaydeder.
 
-### 1. Scriptin Kurulması
-1. Tarayıcınıza **Tampermonkey** eklentisini kurun.
-2. Yeni bir script oluşturun ve `AeroStream.js` dosyasındaki kodun tamamını yapıştırıp kaydedin.
+---
 
-### 2. IP Değiştirme ve Proxy Ayarları
-JavaScript tarayıcı ağ ayarlarını doğrudan değiştiremediği için, IP döngüsünü sağlamak adına harici bir eklenti kullanmanız gerekir:
-1. Tarayıcınıza **Proxy SwitchyOmega** veya **Proxy Switcher and Manager** kurun.
-2. Elinizdeki proxy listesini eklentiye aktarın.
-3. Eklentiyi "Auto-Switch" moduna alın veya manuel olarak IP değiştirerek scripti çalıştırın.
+### 🛠️ Kurulum
 
-## ⚠️ Önemli Uyarılar
-- Bu araç eğitim ve içerik metrik analizi amaçlıdır.
-- Platformların kullanım koşullarını ihlal etmemek için yenileme sürelerini (`minWait`, `maxWait`) gerçekçi tutun.
+#### Adım 1: Python Sunucusunu Kur
+```bash
+# Gerekli paketleri yükle
+pip install flask flask-cors
 
-## 👨‍💻 Geliştirici
-**AeroDLL** (Emirhan) tarafından geliştirilmiştir.
+# Sunucuyu başlat
+python server.py
