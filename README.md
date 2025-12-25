@@ -35,7 +35,7 @@ AeroStream PRO is a powerful automation tool designed to boost story views organ
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) extension for your browser.
 2. Click on the extension icon and select **"Create a new script"**.
 3. Delete any existing code in the editor.
-4. Copy and paste the **AeroStream PRO v2.1** code.
+4. Copy and paste the **AeroStream PRO v2.0** code.
 5. Press `File > Save` or `Ctrl+S`.
 6. Navigate to any **GetInkspired** story page.
 7. The control panel will appear automatically on the top right.
