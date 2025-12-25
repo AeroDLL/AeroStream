@@ -2,7 +2,7 @@
 // @name         🦅 AeroStream PRO v2.0
 // @namespace    http://tampermonkey.net/
 // @version      2.0
-// @description  Advanced CloudFlare bypass for GetInkspired story boosting with customizable settings
+// @description  AeroStream - Browser Automation & DOM Manipulation Experimen
 // @author       AeroDLL
 // @match        https://getinkspired.com/*
 // @match        https://*.getinkspired.com/*
