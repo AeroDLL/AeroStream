@@ -1,6 +1,6 @@
 # 🦅 AeroStream PRO v2.0
 
-![Version](https://img.shields.io/badge/Version-2.1-blue?style=flat)
+![Version](https://img.shields.io/badge/Version-2.0-blue?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-green?style=flat)
 ![Platform](https://img.shields.io/badge/Platform-GetInkspired-orange?style=flat)
 
